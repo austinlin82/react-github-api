@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Followers from './Followers'
 
 class User extends React.Component {
     constructor() {
@@ -89,6 +90,9 @@ class User extends React.Component {
                         {stats.map(this.renderStat)}
                     </ul>
                 </div>
+                <main className="main-content">
+                    {this.props.children}
+                </main>
             </div>
         );
     }
